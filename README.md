@@ -1,1 +1,1 @@
-# Student_Registaration_System
+# Student_Registration_System
