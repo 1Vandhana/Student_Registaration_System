@@ -1,0 +1,198 @@
+/*Css Styles for Student Registrationsystem */
+:root{
+    --bg-gradient:Linear-gradient(120deg,#f6d365,#fda085,#a1c4fd,#c2e9fb);
+    --card-bg:#ffffff;
+    --text-color: #1e293b;
+    --accent-color:#2563eb;
+    --muted:#6b7280;
+    --radius:12px;
+    --shadow:0 4px 12px rgba(0,0,0,0.1);
+    --transitions:all 0.2s ease-in-out;
+}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:"Poppins", system-ui,sans-serif;
+}
+/*---body and Header Styles for SRS--*/
+body{
+    min-height: 100vh;
+    background:var(--bg-gradient);
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
+    color:var(--text color);
+    display:flex;
+    flex-direction:column;
+}
+ @Keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+ }
+ .site-header{
+    text-align:cneter;
+    padding:2rem 1rem;
+ }
+ .site-title{
+    color:var(--muted);
+    margin-top:0.25rem;
+    font-size:1rem;
+ }
+ /*--Main Layout for SRS--*/
+ .container{
+    display:grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap:2rem;
+    max-width:1100px;
+    width:100%;
+    margin:0 auto;
+    padding:2rem;
+ }
+ /*--form Section Styling for SRS--*/
+ .form-section{
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:1.5rem;
+ }
+ .row{
+    dispaly:flex;
+    flex-direction:column;
+    margin-bottom: 1rem;
+
+ }
+ label{
+    font-weight: 600;
+    color:var(--muted);
+    margin-bottom:0.35;
+ }
+ input{
+    padding:0.6rem 0.8rem;
+    border:1px solid #e2e8f0;
+    border-radius:8px;
+    font-size:1rem;
+    transition:var(--transition);
+ }
+ input:focus{
+    outline:none;
+    border-color:var(--accent-color);
+    box-shadow:0 0 0 3px rgba(37,99,235,0.15);
+
+ }
+ .actions{
+    display:flex;
+    gap:1rem;
+    margin-top:1rem;
+ }
+ button{
+    padding:0.6rem 1.2rem;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transitions:var(--transition);
+ }
+ #submitBtn{
+    background:var(--accent-color);
+    color:#fff;
+ }
+ #submitBtn:hover{
+    background:1d4ed8;
+ }
+ .btn-secondary{
+    background:#f3f4f6;
+    color:var(--text color);
+ }
+ .btn-secondary:hover{
+    background:#e2e8f0;
+ }
+ /*----Display section for SRS---*/
+ .display-section{
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:1.5rem;
+    display:flex;
+    flex-direction:column;
+ }
+ .display-section h2{
+    margin-bottom:1rem;
+    font-size:1.3rem;
+ }
+ .table-wrapper{
+    overflow-y:auto;
+    border:1px solid #e2e8f0;
+    border-radius:8px;
+    max-height:420px;
+ }
+ table{
+    width:100%;
+    border-collapse:collapse;
+ }
+ thead th{
+    position:sticky;
+    top:0;
+    background:#f9fafb;
+    padding:0.8rem;
+    text-align:left;
+    color:var(--muted);
+    font-size:0.9rem;
+    border-bottom:1px solid #e5e7eb;
+ }
+ tbody td{
+    padding:0.8rem;
+    border-bottom:1px solid #f1f5f9;
+    font-size:0.95rem;
+ }
+ tbody tr:nth-child(even){
+    background:#f9fafb;
+ }
+ /*----Button actions styles for table in SYS---*/
+ .action-cell{
+    display:flex;
+    gap:0.5rem;
+ }
+ .small-btn{
+    padding:0.35rem 0.6rem;
+    font-size:0.8rem;
+    border-radius:6px;
+    cursur:pointer;
+    font-weight:500;
+    color:#fff;
+    transition:var(--transition);
+ }
+ .edit-btn{
+    background:#10b981;
+ }
+ .edit-btn:hover{
+    background:#059669;
+ }
+ .delete-btn{
+    background:#ef4444;
+    
+ }
+ .delete-btn:hover{
+    background:#dc2626;
+ }
+ /*----Responsive Design styles for SYS---*/
+ @media(max-width:768px){
+    .container{
+        grid-template-columns:1fr;
+    }
+ 
+   .display-section{
+    margin-top:1rem;
+  }
+}
+@media(max-width:480px){
+    h1{
+        font-size:1.5rem;
+    }
+    .actions{
+        flex-direction:column;
+    }
+    button{
+        width:100%;
+    }
+}

@@ -1,11 +1,67 @@
+<!--Basic Structure-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Student Registration system</title>
 </head>
 <body>
     
+    <!--Header Section-->
+    <header class="site-header">
+    <h1>Student Registrattion System</h1>
+    <p class="subtitle"> Add,edit and delete student records.Data can be saved in my browser</p>
+    </header>
+    <main class="container">
+        <!--Form and Input Fields-->
+        <section class="from-section">
+            <form id="studentFrom" novalidate>
+            <div class ="row">
+                <label for="name">Student Name:</label>
+                <input type="text" placeholder="full name" required/>
+            </div>
+            <div class="row">
+                <label for="studentId">Student Id:</label>
+                <input type="studentId" name="studentId" type="text" inputmode="numeric" pattern="\d+" placeholder="e.g. 1" required/>
+            </div>
+            <div class="row">
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email" placeholder="naam@example.com" required/>
+
+            </div>
+            <div class="row">
+                <label for="contact">Contact N0:</label>
+                <input type="contact" name="contact" type="tel" inputmode="numeric" pattern="\d{10,}" placeholder="numbers" required/>
+
+            </div>
+            <div class="actions">
+                <butoon type="submit" id ="submitBtn"> Add student</butoon>
+                <button type="reset" id="resetBtn" class="btn-secondary">Reset</button>
+            </div>
+            </form>
+        </section>
+        <!--Display Section-->
+        <section class="dispay-section">
+            <h2>Registered student records.</h2>
+            <div id="tableWrapper" class="table-wrapper">
+                <table id="studentTable" aria-live="politte">
+                    <thead>
+                        <tr>
+                            <th>Student name</th>
+                            <th>student ID</th>
+                            <th>email ID</th>
+                            <th>Contact No</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>
